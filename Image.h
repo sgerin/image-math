@@ -8,12 +8,17 @@ class Image
 public:
 	Image();
 	Image(std::string);
-	Image(Image);
+	Image(const Image&);
 	~Image();
 	
 	int get_pixel(int, int);
+	int get_pixel(int);
 	void set_pixel(int, int, int);
 	void write_to_file(std::string);
+	int get_lines();
+	int get_columns(); 
+	int get_max_value(); 
+	int get_min_value(); 
 	
 	
 private:
