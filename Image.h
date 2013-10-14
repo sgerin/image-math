@@ -11,14 +11,14 @@ public:
 	Image(const Image&);
 	~Image();
 	
-	int get_pixel(int, int);
-	int get_pixel(int);
+	int get_pixel(int, int) const;
+	int get_pixel(int) const;
 	void set_pixel(int, int, int);
-	void write_to_file(std::string);
-	int get_lines();
-	int get_columns(); 
-	int get_max_value(); 
-	int get_min_value(); 
+	void write_to_file(std::string) const;
+	int get_lines() const;
+	int get_columns() const; 
+	int get_max_value() const; 
+	int get_min_value() const; 
 	
 	
 private:

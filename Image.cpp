@@ -32,15 +32,15 @@ Image::~Image()
 }
 
 
-int Image::get_pixel(int i)
+int Image::get_pixel(int i) const
 {
-	if(height < columns * height)
+	if(i < columns * lines)
 		return pixels[i];
 	else
 		return -1;
 }
 
-int Image::get_pixel(int height, int width)
+int Image::get_pixel(int height, int width) const
 {
 	if(height <= lines && width <= columns && height > 0 && width > 0)
 		return pixels[columns*height-1 + width-1];
@@ -67,26 +67,26 @@ void Image::set_pixel(int height, int width, int value)
 	}
 }
 
-void Image::write_to_file(std::string)
+void Image::write_to_file(std::string) const
 {
 }
 
-int Image::get_lines()
+int Image::get_lines() const
 {
 	return lines; 
 }
 
-int Image::get_columns()
+int Image::get_columns() const
 {
 	return columns; 
 } 
 
-int Image::get_max_value()
+int Image::get_max_value() const
 {
 	return max_value;
 }
 
-int Image::get_min_value()
+int Image::get_min_value() const
 {
 	return min_value; 
 }
